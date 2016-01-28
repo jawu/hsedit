@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            name="Haskell Editor"
+            extensions="hs"
+            icon="icons/haskell.png"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="de.fhflensburg.pd.group008.hsedit.editors.HaskellEditor"
+            id="de.fhflensburg.pd.group008.hsedit.editors.HaskellEditor" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.preferencePages">
+   	  <page 
+   	 		name="Haskell Editor"
+   	 		class="de.fhflensburg.pd.group008.hsedit.preferences.PreferencePage"
+   	 		id="de.fhflensburg.pd.group008.hsedit.preferences.preference.page" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">
+   	  <wizard
+   	 		name="Haskell File"
+   	 		class="de.fhflensburg.pd.group008.hsedit.wizards.HaskellFileWizard"
+   	 		icon="icons/haskell.png"
+   	 		id="de.fhflensburg.pd.group008.hsedit.wizards.HaskellFile" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.commands">
+   	<command 
+   		name="Haskell Run"
+        id="hsedit.command.run" />
+   </extension>
+   
+   <extension point="org.eclipse.ui.handlers">
+  	<handler
+        commandId="hsedit.command.run"
+        class="de.fhflensburg.pd.group008.hsedit.console.HaskellLauncher" />
+	</extension>
+   
+   <extension point="org.eclipse.ui.menus">
+   	<menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar">
+ 		<toolbar id="de.fhflensburg.pd.group008.hsedit.toolbars.toolbar">
+    		<command
+          		commandId="hsedit.command.run"
+          		icon="icons/haskell_run.png"
+          		tooltip="Run the active Haskell file"
+          		style="push"
+          		id="de.fhflensburg.pd.group008.hsedit.runbutton">
+    		</command>
+ 		</toolbar>
+	</menuContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HsEdit
+Bundle-SymbolicName: de.fhflensburg.pd.group008.hsedit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.fhflensburg.pd.group008.hsedit.Activator
+Bundle-Vendor: Janneck Wullschleger
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ org.eclipse.core.resources;bundle-version="3.9.1",
+ org.eclipse.ui.views;bundle-version="3.7.0",
+ org.eclipse.ui;bundle-version="3.106.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.debug.core,
+ org.eclipse.debug.core.model,
+ org.eclipse.jface,
+ org.eclipse.jface.util,
+ org.eclipse.ui,
+ org.eclipse.ui.console,
+ org.eclipse.ui.dialogs,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.ide.dialogs,
+ org.eclipse.ui.part
